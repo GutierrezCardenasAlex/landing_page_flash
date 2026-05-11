@@ -52,6 +52,19 @@ const stats = [
   { value: '4.9★', label: 'Calificacion esperada' },
 ]
 
+const apkDownloadUrl = import.meta.env.VITE_APK_DOWNLOAD_URL
+const hasDriveDownloadUrl =
+  apkDownloadUrl && !apkDownloadUrl.includes('ID_DEL_ARCHIVO')
+
+function handleMissingDownloadUrl(event) {
+  if (hasDriveDownloadUrl) {
+    return
+  }
+
+  event.preventDefault()
+  window.alert('Falta configurar el enlace real de Google Drive para descargar FLASH GO.')
+}
+
 export function FlashGoLandingPage() {
   return (
     <div className="min-h-screen overflow-hidden bg-[#050505] text-white">
@@ -93,9 +106,10 @@ export function FlashGoLandingPage() {
 
           <div className="flex items-center gap-3">
             <a
-              href="/apk"
+              href={hasDriveDownloadUrl ? apkDownloadUrl : '#descargar'}
               target="_blank"
               rel="noreferrer"
+              onClick={handleMissingDownloadUrl}
               className="hidden rounded-full bg-orange-500 px-5 py-3 text-sm font-semibold text-black transition hover:bg-orange-400 sm:inline-flex"
             >
               Descargar APK
@@ -146,9 +160,10 @@ export function FlashGoLandingPage() {
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
-                href="/apk"
+                href={hasDriveDownloadUrl ? apkDownloadUrl : '#descargar'}
                 target="_blank"
                 rel="noreferrer"
+                onClick={handleMissingDownloadUrl}
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-orange-500 px-6 py-4 text-base font-bold text-black shadow-[0_20px_50px_rgba(249,115,22,0.35)] transition hover:bg-orange-400"
               >
                 Descargar APK
@@ -371,9 +386,10 @@ export function FlashGoLandingPage() {
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
-                  href="/apk"
+                  href={hasDriveDownloadUrl ? apkDownloadUrl : '#descargar'}
                   target="_blank"
                   rel="noreferrer"
+                  onClick={handleMissingDownloadUrl}
                   className="inline-flex items-center justify-center rounded-full bg-orange-500 px-6 py-4 text-base font-bold text-black transition hover:bg-orange-400"
                 >
                   Descargar APK
@@ -387,7 +403,9 @@ export function FlashGoLandingPage() {
               </div>
 
               <p className="mt-4 text-sm text-orange-200/80">
-                Version Android APK alojada en Google Drive
+                {hasDriveDownloadUrl
+                  ? 'Version Android APK alojada en Google Drive'
+                  : 'Pendiente configurar el enlace real de Google Drive'}
               </p>
             </div>
 

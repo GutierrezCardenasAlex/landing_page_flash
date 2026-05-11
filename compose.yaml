@@ -2,6 +2,8 @@ services:
   flash-go:
     build:
       context: .
+      args:
+        VITE_APK_DOWNLOAD_URL: ${VITE_APK_DOWNLOAD_URL:-https://drive.google.com/uc?export=download&id=ID_DEL_ARCHIVO}
     container_name: flash-go-web
     restart: unless-stopped
     ports:
