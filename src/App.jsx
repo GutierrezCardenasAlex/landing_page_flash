@@ -1,7 +1,9 @@
 import {
   ArrowRight,
   BadgeCheck,
+  CircleDot,
   Clock3,
+  MapPin,
   MapPinned,
   Menu,
   Navigation,
@@ -175,63 +177,122 @@ export function FlashGoLandingPage() {
 
           <div id="app" className="relative mx-auto flex w-full max-w-md justify-center">
             <div className="absolute inset-x-8 top-10 h-64 rounded-full bg-orange-500/20 blur-3xl" />
-            <div className="relative w-full rounded-[2.75rem] border border-orange-400/25 bg-gradient-to-b from-[#121212] via-[#090909] to-black p-3 shadow-[0_30px_80px_rgba(0,0,0,0.5)]">
-              <div className="rounded-[2.2rem] border border-white/8 bg-[#0f0f0f] p-4">
-                <div className="mx-auto mb-4 h-1.5 w-24 rounded-full bg-white/10" />
-                <div className="rounded-[2rem] bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))] p-4">
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <p className="text-xs uppercase tracking-[0.3em] text-orange-300/70">
-                        Buen dia
-                      </p>
-                      <h2 className="mt-2 text-2xl font-bold text-white">Hola, Andrea</h2>
-                    </div>
-                    <div className="rounded-2xl bg-orange-500/15 p-3 text-orange-300">
-                      <MapPinned className="h-5 w-5" />
-                    </div>
-                  </div>
-
-                  <div className="mt-5 rounded-2xl border border-white/8 bg-black/60 px-4 py-3 text-sm text-white/45">
-                    Buscar destino...
-                  </div>
-
-                  <div className="relative mt-5 overflow-hidden rounded-[1.75rem] border border-orange-400/20 bg-[#131313] p-4">
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(249,115,22,0.16),_transparent_35%)]" />
-                    <div className="absolute -left-6 top-8 h-px w-40 rotate-12 bg-white/12" />
-                    <div className="absolute right-0 top-14 h-px w-32 -rotate-6 bg-white/10" />
-                    <div className="absolute left-10 top-24 h-px w-40 -rotate-12 bg-white/10" />
-                    <div className="absolute left-28 top-4 h-2.5 w-2.5 rounded-full bg-orange-400 shadow-[0_0_0_6px_rgba(249,115,22,0.18)]" />
-                    <div className="absolute bottom-10 right-14 h-3 w-3 rounded-full bg-white shadow-[0_0_0_6px_rgba(255,255,255,0.06)]" />
-                    <div className="absolute bottom-12 left-16 right-16 border-t-2 border-dashed border-orange-400/60" />
-                    <div className="relative h-40 rounded-[1.4rem] border border-white/6 bg-[linear-gradient(135deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01))]">
-                      <div className="absolute left-5 top-5 rounded-full bg-black/70 px-3 py-1 text-[11px] font-semibold text-white/70">
-                        Zona centro
-                      </div>
-                      <div className="absolute bottom-4 right-4 rounded-full border border-orange-400/30 bg-orange-500/15 px-3 py-1 text-[11px] font-semibold text-orange-200">
-                        2.4 km
-                      </div>
+            <div className="absolute -right-8 top-14 hidden rounded-3xl border border-white/10 bg-white/8 px-4 py-3 shadow-[0_25px_70px_rgba(0,0,0,0.4)] backdrop-blur-xl sm:block">
+              <p className="text-xs uppercase tracking-[0.22em] text-white/45">Online</p>
+              <p className="mt-1 text-sm font-bold text-orange-200">12 conductores cerca</p>
+            </div>
+            <div className="absolute -left-6 bottom-24 hidden rounded-3xl border border-orange-300/20 bg-black/70 px-4 py-3 shadow-[0_25px_70px_rgba(249,115,22,0.18)] backdrop-blur-xl sm:block">
+              <p className="text-xs uppercase tracking-[0.22em] text-white/45">Llegada</p>
+              <p className="mt-1 text-sm font-bold text-white">3 minutos</p>
+            </div>
+            <div className="relative w-full rounded-[2.75rem] border border-orange-300/25 bg-gradient-to-b from-[#242424] via-[#0d0d0d] to-black p-2 shadow-[0_35px_100px_rgba(0,0,0,0.65)]">
+              <div className="rounded-[2.35rem] border border-white/10 bg-[#0b0b0b] p-3">
+                <div className="mx-auto mb-3 h-1.5 w-24 rounded-full bg-white/12" />
+                <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-[#111111]">
+                  <div className="flex items-center justify-between border-b border-white/8 bg-white/[0.03] px-4 py-3">
+                    <span className="text-xs font-semibold text-white/65">9:41</span>
+                    <div className="flex items-center gap-1.5">
+                      <span className="h-1.5 w-4 rounded-full bg-white/35" />
+                      <span className="h-1.5 w-3 rounded-full bg-orange-400" />
                     </div>
                   </div>
 
-                  <div className="mt-5 rounded-[1.75rem] border border-orange-400/20 bg-gradient-to-r from-orange-500/15 via-orange-500/8 to-white/5 p-4">
-                    <div className="flex items-start justify-between gap-4">
+                  <div className="p-4">
+                    <div className="flex items-start justify-between">
                       <div>
-                        <p className="text-sm text-white/60">Mototaxi cercano</p>
-                        <p className="mt-1 text-xl font-bold text-white">FLASH Rider</p>
-                        <p className="mt-2 text-sm text-orange-200">Bs. 8.50</p>
+                        <p className="text-xs uppercase tracking-[0.24em] text-orange-300/70">
+                          Buen dia
+                        </p>
+                        <h2 className="mt-2 text-2xl font-black text-white">Hola, Andrea</h2>
                       </div>
-                      <div className="rounded-2xl bg-black/35 px-3 py-2 text-right">
-                        <p className="text-xs text-white/45">Llegada</p>
-                        <p className="text-sm font-semibold text-white">3 min</p>
+                      <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-2xl border border-orange-300/30 bg-orange-500/10">
+                        <img
+                          src="/logo.jpeg"
+                          alt="FLASH GO"
+                          className="h-full w-full object-cover"
+                        />
                       </div>
                     </div>
 
-                    <button
-                      type="button"
-                      className="mt-4 inline-flex w-full items-center justify-center rounded-2xl bg-orange-500 px-4 py-3 text-sm font-bold text-black transition hover:bg-orange-400"
-                    >
-                      Pedir viaje
-                    </button>
+                    <div className="mt-5 grid gap-3">
+                      <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-black/55 px-4 py-3">
+                        <CircleDot className="h-4 w-4 text-orange-300" />
+                        <div>
+                          <p className="text-[11px] uppercase tracking-[0.18em] text-white/35">Origen</p>
+                          <p className="text-sm font-semibold text-white">Tu ubicacion actual</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-3 rounded-2xl border border-orange-300/25 bg-orange-500/10 px-4 py-3">
+                        <MapPin className="h-4 w-4 text-orange-300" />
+                        <div>
+                          <p className="text-[11px] uppercase tracking-[0.18em] text-white/35">Destino</p>
+                          <p className="text-sm font-semibold text-white">Buscar destino...</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="relative mt-5 overflow-hidden rounded-[1.75rem] border border-orange-300/20 bg-[#161616] p-4">
+                      <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(249,115,22,0.14),transparent_48%),linear-gradient(45deg,transparent_0,transparent_46%,rgba(255,255,255,0.06)_47%,rgba(255,255,255,0.06)_48%,transparent_49%)]" />
+                      <div className="absolute left-8 top-10 h-px w-40 rotate-12 bg-white/12" />
+                      <div className="absolute right-0 top-16 h-px w-36 -rotate-6 bg-white/10" />
+                      <div className="absolute left-4 top-28 h-px w-56 -rotate-12 bg-white/10" />
+                      <div className="absolute left-16 bottom-9 right-16 border-t-2 border-dashed border-orange-300/65" />
+                      <div className="absolute left-12 bottom-8 h-3 w-3 rounded-full bg-white shadow-[0_0_0_7px_rgba(255,255,255,0.07)]" />
+                      <div className="absolute right-16 bottom-8 h-3 w-3 rounded-full bg-orange-400 shadow-[0_0_0_8px_rgba(249,115,22,0.18)]" />
+                      <div className="relative h-40 rounded-[1.4rem] border border-white/8 bg-[linear-gradient(135deg,rgba(255,255,255,0.04),rgba(255,255,255,0.01))]">
+                        <div className="absolute left-5 top-5 rounded-full bg-black/70 px-3 py-1 text-[11px] font-semibold text-white/70">
+                          Zona centro
+                        </div>
+                        <div className="absolute bottom-4 right-4 rounded-full border border-orange-300/30 bg-orange-500/15 px-3 py-1 text-[11px] font-semibold text-orange-100">
+                          2.4 km
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="mt-5 rounded-[1.75rem] border border-orange-300/25 bg-gradient-to-r from-orange-500/18 via-white/7 to-white/5 p-4 shadow-[0_18px_45px_rgba(249,115,22,0.12)]">
+                      <div className="flex items-start justify-between gap-4">
+                        <div className="flex items-center gap-3">
+                          <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-orange-300/20 bg-black/45 text-orange-200">
+                            <Navigation className="h-5 w-5" />
+                          </div>
+                          <div>
+                            <p className="text-sm text-white/60">Mototaxi cercano</p>
+                            <p className="mt-1 text-xl font-bold text-white">FLASH Rider</p>
+                            <p className="mt-2 inline-flex items-center gap-1.5 rounded-full bg-emerald-400/10 px-2.5 py-1 text-xs font-semibold text-emerald-200">
+                              <ShieldCheck className="h-3.5 w-3.5" />
+                              Verificado
+                            </p>
+                          </div>
+                        </div>
+                        <div className="rounded-2xl bg-black/35 px-3 py-2 text-right">
+                          <p className="text-xs text-white/45">Llegada</p>
+                          <p className="text-sm font-semibold text-white">3 min</p>
+                        </div>
+                      </div>
+
+                      <div className="mt-4 grid grid-cols-3 gap-2 text-center">
+                        <div className="rounded-2xl bg-black/30 px-2 py-2">
+                          <p className="text-[11px] text-white/40">Placa</p>
+                          <p className="text-xs font-bold text-white">FG-204</p>
+                        </div>
+                        <div className="rounded-2xl bg-black/30 px-2 py-2">
+                          <p className="text-[11px] text-white/40">Rating</p>
+                          <p className="text-xs font-bold text-white">4.9</p>
+                        </div>
+                        <div className="rounded-2xl bg-black/30 px-2 py-2">
+                          <p className="text-[11px] text-white/40">Ruta</p>
+                          <p className="text-xs font-bold text-white">Directa</p>
+                        </div>
+                      </div>
+
+                      <button
+                        type="button"
+                        className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-orange-500 px-4 py-3 text-sm font-black text-black shadow-[0_16px_35px_rgba(249,115,22,0.28)] transition hover:bg-orange-400"
+                      >
+                        Pedir viaje
+                        <ArrowRight className="h-4 w-4" />
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
