@@ -94,6 +94,8 @@ export function FlashGoLandingPage() {
           <div className="flex items-center gap-3">
             <a
               href="/apk"
+              target="_blank"
+              rel="noreferrer"
               className="hidden rounded-full bg-orange-500 px-5 py-3 text-sm font-semibold text-black transition hover:bg-orange-400 sm:inline-flex"
             >
               Descargar APK
@@ -145,6 +147,8 @@ export function FlashGoLandingPage() {
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a
                 href="/apk"
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-orange-500 px-6 py-4 text-base font-bold text-black shadow-[0_20px_50px_rgba(249,115,22,0.35)] transition hover:bg-orange-400"
               >
                 Descargar APK
@@ -368,6 +372,8 @@ export function FlashGoLandingPage() {
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
                   href="/apk"
+                  target="_blank"
+                  rel="noreferrer"
                   className="inline-flex items-center justify-center rounded-full bg-orange-500 px-6 py-4 text-base font-bold text-black transition hover:bg-orange-400"
                 >
                   Descargar APK
