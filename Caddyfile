@@ -1,4 +1,4 @@
-flash-go.cybernovatech.space {
+(flashgo_site) {
   root * /srv
   encode zstd gzip
  
@@ -16,4 +16,12 @@ flash-go.cybernovatech.space {
   }
 
   try_files {path} /index.html
+}
+
+flash-go.cybernovatech.space {
+  import flashgo_site
+}
+
+http://62.171.186.246 {
+  import flashgo_site
 }
